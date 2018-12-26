@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="popup.js"></script>
+	</head>
+	<body>
+		<div style="min-width: 450px;">
+			<label for="uuid">UUID: </label>
+			<input disabled type="text" id="uuid" style="min-width: 300px;" />
+			<button id="uuid_btn" style="min-width: 75px;">Change</button>
+		</div>
+		<div style="min-width: 450px;">
+			<label for="subscribe">New: </label>
+			<input type="text" id="subscribe" style="min-width: 300px;" />
+			<button id="subscribe_btn" style="min-width: 75px;">Subscribe</button>
+		</div>
+		<div id="main" style="min-width: 450px;">
+		</div>
+		<div style="min-width: 450px;">
+			<label for="secret">Secret: </label>
+			<input type="text" id="secret" style="min-width: 300px;" />
+			<button id="send_btn" style="min-width: 75px;">Send</button>
+		</div>
+		<textarea style="min-width: 450px;" id="text"></textarea>
+	</body>
+</html>
