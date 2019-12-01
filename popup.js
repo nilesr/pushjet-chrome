@@ -1,5 +1,4 @@
-//const API_BASE = "https://seattle.niles.xyz/pushjet-bridge";
-const API_BASE = "http://10.0.0.14/pushjet-bridge";
+const API_BASE = "https://niles.xyz";
 var uuid_get = function uuid_get() {
 	return localStorage.getItem("uuid");
 }
@@ -118,10 +117,13 @@ var render = function render() {
 			title.innerText = m["title"];
 			sdiv.appendChild(title);
 		}
-		var url = (m["url"] || "").length > 0;
+		var url = (m["link"] || "").length > 0;
 		var msg = document.createElement(url ? "a" : "span");
 		if (url) {
-			msg.href = m["url"];
+			msg.href = m["link"];
+			msg.addEventListener("click", function() {
+				window.open(m["link"]);
+			});
 		}
 		msg.innerText = m["message"];
 		msg.addEventListener("click", function() {
